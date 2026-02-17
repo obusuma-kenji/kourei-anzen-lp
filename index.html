@@ -3,474 +3,1129 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>高年齢労働者の安全と活躍を守る｜新・安全衛生管理（令和8年4月適用）</title>
-  <meta name="description" content="令和8年4月1日適用の『高年齢者の労働災害防止のための指針』に対応。経営トップ主導×現場改善×体力の見える化で、転倒・腰痛・暑熱リスクを下げ、ベテラン人材を戦力化します。" />
+  <title>高年齢労働者の安全と健康｜令和8年4月 新指針対応ガイド</title>
+  <meta name="description" content="令和8年4月1日適用「高年齢者の労働災害防止のための指針」完全対応。経営者・人事労務担当者のための実務ガイド。転倒防止、体力チェック、エイジマネジメントまで網羅。" />
+  <meta name="theme-color" content="#2D8A6E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&family=Zen+Maru+Gothic:wght@400;700;900&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      /* Pale Green Theme */
-      --bg1:#eef8f1;
-      --bg2:#e6f5ea;
-      --panel: rgba(255,255,255,.82);
-      --panel2: rgba(255,255,255,.68);
-      --stroke: rgba(15,35,20,.12);
-      --text:#0f2314;
-      --muted: rgba(15,35,20,.68);
-      --brand:#1f7a4a;
-      --brand2:#2a9b5c;
-      --accent:#0f5f3a;
-      --shadow: 0 18px 45px rgba(10,25,15,.10);
-      --shadow2: 0 12px 30px rgba(10,25,15,.08);
+    :root {
+      --g1: #E8F5E9;
+      --g2: #C8E6C9;
+      --g3: #A5D6A7;
+      --g4: #66BB6A;
+      --g5: #2D8A6E;
+      --g6: #1B5E20;
+      --ink: #1a2e1a;
+      --muted: rgba(26,46,26,.68);
+      --card: rgba(255,255,255,.78);
+      --card2: rgba(255,255,255,.58);
+      --stroke: rgba(26,46,26,.10);
+      --shadow: 0 24px 70px rgba(0,40,20,.14);
+      --shadow2: 0 14px 40px rgba(0,40,20,.10);
       --radius: 18px;
       --radius2: 26px;
       --max: 1120px;
+      --warn: #E65100;
+      --blue: #1565C0;
+      --teal: #00796B;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI","Yu Gothic",Meiryo,Arial,sans-serif;
-      line-height:1.75;
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Noto Sans JP", "Zen Maru Gothic", system-ui, sans-serif;
+      color: var(--ink);
       background:
-        radial-gradient(1200px 700px at 12% 0%, rgba(42,155,92,.16), transparent 55%),
-        radial-gradient(900px 650px at 92% 8%, rgba(31,122,74,.14), transparent 56%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
+        radial-gradient(1200px 600px at 10% 8%, rgba(255,255,255,.45), transparent 60%),
+        radial-gradient(1000px 500px at 90% 12%, rgba(255,255,255,.30), transparent 55%),
+        linear-gradient(180deg, var(--g1) 0%, var(--g2) 35%, var(--g3) 70%, var(--g2) 100%);
+      overflow-x: hidden;
+      min-height: 100vh;
     }
-    a{color:inherit}
-    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(238,248,241,.78);
-      border-bottom:1px solid var(--stroke);
-    }
-    .topbar-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0;
-      gap:14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px; font-weight:800;
-      letter-spacing:.02em;
-    }
-    .logo{
-      width:36px; height:36px; border-radius:12px;
-      background: linear-gradient(135deg, rgba(31,122,74,.95), rgba(42,155,92,.95));
-      box-shadow: 0 10px 20px rgba(31,122,74,.18);
-      display:grid; place-items:center;
-      color:#fff;
-      font-weight:900;
-    }
-    .nav{
-      display:flex; gap:14px; flex-wrap:wrap;
-      font-size:14px; color:var(--muted);
-    }
-    .nav a{ text-decoration:none; padding:8px 10px; border-radius:12px;}
-    .nav a:hover{ background: rgba(255,255,255,.6); color:var(--text); }
 
-    .hero{
-      padding:44px 0 22px;
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+
+    /* ── Topbar ── */
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(232, 245, 233, .72);
+      border-bottom: 1px solid rgba(26,46,26,.08);
     }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:22px;
-      align-items:stretch;
+    .topbar .inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px; padding: 12px 0;
     }
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr; }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 900; letter-spacing: .02em; white-space: nowrap;
+      font-size: 14px;
     }
-    .card{
-      background: var(--panel);
-      border:1px solid var(--stroke);
+    .logo {
+      width: 36px; height: 36px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--g6), var(--g5));
+      box-shadow: 0 8px 20px rgba(0,60,30,.22);
+      flex: 0 0 auto; position: relative; overflow: hidden;
+    }
+    .logo::after {
+      content: "🛡";
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .nav {
+      display: flex; align-items: center; gap: 16px;
+      font-weight: 700; font-size: 12px;
+      color: var(--muted); white-space: nowrap;
+    }
+    .nav a { transition: color .15s; }
+    .nav a:hover { color: var(--g6); }
+    .pill {
+      padding: 5px 10px; border-radius: 999px;
+      background: rgba(45,138,110,.12);
+      border: 1px solid rgba(45,138,110,.18);
+      font-weight: 900; font-size: 11px;
+      color: var(--g5);
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 18px; border-radius: 999px;
+      font-weight: 900; font-size: 13px;
+      border: 1px solid rgba(26,46,26,.12);
+      background: rgba(255,255,255,.62);
+      box-shadow: 0 8px 24px rgba(0,40,20,.08);
+      transition: transform .15s, filter .15s, background .15s;
+      cursor: pointer; user-select: none;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.02); }
+    .btn:active { transform: translateY(0); }
+    .btn.primary {
+      background: linear-gradient(135deg, var(--g6) 0%, var(--g5) 60%, var(--teal) 100%);
+      color: rgba(255,255,255,.95); border: none;
+      box-shadow: 0 14px 40px rgba(0,60,30,.22);
+    }
+    .btn.primary:hover { box-shadow: 0 18px 50px rgba(0,60,30,.28); }
+    .btn.dark {
+      background: rgba(26,46,26,.90);
+      color: rgba(255,255,255,.92);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .btn.ghost { background: rgba(255,255,255,.40); }
+    .btn.warn {
+      background: linear-gradient(135deg, #BF360C, #E65100);
+      color: white; border: none;
+      box-shadow: 0 10px 30px rgba(230,81,0,.20);
+    }
+
+    /* ── Alert Banner ── */
+    .alert {
+      margin: 22px 0 0;
+      padding: 14px 20px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(230,81,0,.08), rgba(230,81,0,.04));
+      border: 1.5px solid rgba(230,81,0,.25);
+      display: flex; align-items: center; gap: 12px;
+      flex-wrap: wrap;
+    }
+    .alert .icon { font-size: 22px; }
+    .alert .text { flex: 1; min-width: 200px; }
+    .alert .text strong { color: var(--warn); font-size: 15px; }
+    .alert .text p { color: var(--muted); font-size: 12px; line-height: 1.7; margin-top: 2px; }
+
+    /* ── Hero ── */
+    .hero { padding: 22px 0 10px; }
+    .heroCard {
       border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.55));
+      border: 1px solid var(--stroke);
       box-shadow: var(--shadow);
+      overflow: hidden; position: relative;
     }
-    .hero-left{ padding:28px; }
-    .badge{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:8px 14px;
-      border-radius:999px;
-      background: rgba(31,122,74,.10);
-      border:1px solid rgba(31,122,74,.18);
-      color: var(--accent);
-      font-weight:700;
-      font-size:13px;
+    .heroCard::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: url("shishin-infographic.png") center center / cover no-repeat;
+      opacity: .06; z-index: 0; pointer-events: none;
     }
-    .h1{
-      margin:14px 0 10px;
-      font-size: clamp(28px, 3.2vw, 44px);
-      line-height:1.18;
-      letter-spacing:.01em;
-      font-weight:900;
+    .heroCard::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,.90) 0%, rgba(232,245,233,.65) 45%, rgba(200,230,201,.40) 100%);
+      z-index: 0; pointer-events: none;
     }
-    .lead{
-      margin:0 0 18px;
-      color: var(--muted);
-      font-size: 16px;
+    .heroCard > * { position: relative; z-index: 1; }
+    .heroTop {
+      padding: 22px 22px 0;
+      display: flex; flex-wrap: wrap; gap: 10px;
+      align-items: center; justify-content: space-between;
     }
-    .hero-cta{
-      display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      text-decoration:none;
-      padding:12px 16px;
-      border-radius: 14px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.7);
-      box-shadow: var(--shadow2);
-      font-weight:800;
-      font-size:14px;
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(31,122,74,.95), rgba(42,155,92,.95));
-      border-color: rgba(31,122,74,.25);
-      color:#fff;
-    }
-    .btn:hover{ transform: translateY(-1px); transition:.15s ease; }
-    .stats{
-      display:grid;
-      grid-template-columns: repeat(3,1fr);
-      gap:12px;
-      margin-top:18px;
-    }
-    @media (max-width: 560px){
-      .stats{grid-template-columns:1fr;}
-    }
-    .stat{
-      background: var(--panel2);
-      border:1px solid var(--stroke);
-      border-radius: 16px;
-      padding:12px 14px;
-    }
-    .stat b{ display:block; font-size:14px; }
-    .stat span{ color:var(--muted); font-size:13px; }
-
-    .hero-right{
-      padding:14px;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-    .media{
-      border-radius: 18px;
-      overflow:hidden;
-      border:1px solid var(--stroke);
+    .heroTop .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 10px; border-radius: 999px;
       background: rgba(255,255,255,.65);
+      border: 1px solid rgba(26,46,26,.10);
+      font-weight: 900; font-size: 11px;
+      color: var(--muted); white-space: nowrap;
+    }
+    .chip b { color: var(--ink); }
+    .chip.accent {
+      background: rgba(230,81,0,.10);
+      border-color: rgba(230,81,0,.20);
+      color: var(--warn);
+    }
+    .heroBody {
+      padding: 10px 22px 22px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px; align-items: start;
+    }
+    h1 {
+      margin: 10px 0 10px;
+      font-size: clamp(24px, 3.5vw, 40px);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+    h1 .accent { color: var(--g5); }
+    h1 .warn { color: var(--warn); }
+    .lead {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px; line-height: 1.9;
+      max-width: 62ch;
+    }
+    .heroActions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .side { display: grid; gap: 10px; }
+    .sideCard {
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--stroke);
       box-shadow: var(--shadow2);
+      padding: 14px;
     }
-    .media img{ width:100%; height:auto; display:block; }
-    .mini{
-      padding:14px 14px 16px;
-    }
-    .mini h3{ margin:0 0 6px; font-size:16px; }
-    .mini p{ margin:0; color:var(--muted); font-size:13px; }
+    .sideCard h3 { margin: 0 0 5px; font-size: 13px; font-weight: 700; }
+    .sideCard p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
 
-    .section{ padding:22px 0; }
-    .section h2{
-      margin:0 0 10px;
-      font-size: 22px;
-      letter-spacing:.01em;
+    .heroImgRow {
+      padding: 0 22px 22px;
+      position: relative; z-index: 1;
     }
-    .section p{ margin:0; color:var(--muted); }
+    .heroImgRow img {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(26,46,26,.08);
+      box-shadow: 0 12px 36px rgba(0,40,20,.10);
+    }
 
-    .grid3{
-      margin-top:14px;
-      display:grid;
+    /* ── Sections ── */
+    section { padding: 20px 0; }
+    .sectionTitle {
+      margin: 4px 0 12px;
+      display: flex; flex-direction: column; gap: 5px;
+    }
+    .sectionTitle h2 {
+      margin: 0; font-size: 20px;
+      letter-spacing: -.01em; font-weight: 900;
+    }
+    .sectionTitle p {
+      margin: 0; color: var(--muted);
+      font-size: 12px; line-height: 1.75;
+      max-width: 72ch;
+    }
+
+    .grid {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap:14px;
+      gap: 12px;
     }
-    @media (max-width: 980px){ .grid3{grid-template-columns:1fr;} }
-    .feature{
-      padding:16px;
-      border-radius: 18px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.75);
-      box-shadow: var(--shadow2);
-    }
-    .feature h3{ margin:0 0 6px; font-size:16px; }
-    .feature ul{ margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:14px; }
-    .feature li{ margin:6px 0; }
+    .grid2 { grid-template-columns: repeat(2, 1fr); }
 
-    .steps{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
+    .card {
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow2);
+      padding: 16px;
     }
-    @media (max-width: 980px){ .steps{grid-template-columns:1fr;} }
-    .step{
-      padding:16px;
-      border-radius: 18px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.75);
+    .card h3 { margin: 0 0 7px; font-size: 14px; font-weight: 700; }
+    .card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
+    .card .tag {
+      display: inline-block;
+      padding: 3px 8px; border-radius: 6px;
+      font-size: 10px; font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .tag.green { background: rgba(45,138,110,.12); color: var(--g5); }
+    .tag.orange { background: rgba(230,81,0,.10); color: var(--warn); }
+    .tag.blue { background: rgba(21,101,192,.10); color: var(--blue); }
+    .tag.teal { background: rgba(0,121,107,.10); color: var(--teal); }
+
+    .tiny { font-size: 11px; color: var(--muted); }
+
+    /* ── Stats ── */
+    .statsGrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .statCard {
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow2);
+      padding: 16px 14px; text-align: center;
+    }
+    .statCard .num {
+      font-size: 30px; font-weight: 900;
+      letter-spacing: -.03em;
+      background: linear-gradient(135deg, var(--g6), var(--g5));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    .statCard .label {
+      margin-top: 5px;
+      font-size: 11px; font-weight: 700;
+      color: var(--muted); line-height: 1.6;
+    }
+
+    /* ── Steps ── */
+    .stepsGrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .stepCard {
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow2);
+      padding: 16px; position: relative;
+    }
+    .stepCard .stepNum {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 30px; height: 30px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--g6), var(--g5));
+      color: rgba(255,255,255,.92);
+      font-weight: 900; font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .stepCard h3 { margin: 0 0 6px; font-size: 13px; font-weight: 700; }
+    .stepCard p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
+
+    /* ── Table ── */
+    .tableWrap {
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.70);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow2);
+      overflow: hidden;
+    }
+    .tableWrap table {
+      width: 100%; border-collapse: collapse;
+      font-size: 12px;
+    }
+    .tableWrap th {
+      background: linear-gradient(135deg, var(--g6), var(--g5));
+      color: white; font-weight: 700;
+      padding: 10px 14px; text-align: left;
+      font-size: 11px;
+    }
+    .tableWrap td {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(26,46,26,.06);
+      color: var(--ink); line-height: 1.65;
+    }
+    .tableWrap tr:nth-child(even) td { background: rgba(232,245,233,.35); }
+
+    /* ── iframe / PDF ── */
+    iframe {
+      width: 100%; height: 720px;
+      border-radius: var(--radius);
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.50);
+      box-shadow: 0 10px 30px rgba(0,40,20,.08);
+    }
+
+    /* ── Download row ── */
+    .downloadRow {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px; flex-wrap: wrap;
+      padding: 16px;
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--stroke);
       box-shadow: var(--shadow2);
     }
-    .kicker{
-      display:inline-flex; gap:8px; align-items:center;
-      font-size:12px; font-weight:800;
-      color: var(--accent);
-      background: rgba(31,122,74,.10);
-      border: 1px solid rgba(31,122,74,.18);
-      padding:6px 10px;
+    .downloadRow h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; }
+    .downloadRow p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
+
+    /* ── Contact Form ── */
+    .formCard {
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.60));
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      padding: 32px 28px;
+    }
+    .formCard h2 {
+      font-size: clamp(18px, 2.6vw, 26px);
+      font-weight: 900; letter-spacing: -.02em;
+      margin-bottom: 5px;
+    }
+    .formCard > p {
+      color: var(--muted); font-size: 12px; line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .formGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 18px;
+    }
+    .formGroup { display: flex; flex-direction: column; gap: 4px; }
+    .formGroup.full { grid-column: 1 / -1; }
+    .formGroup label {
+      font-size: 12px; font-weight: 700;
+      color: rgba(26,46,26,.75);
+    }
+    .formGroup label .req {
+      font-size: 10px; font-weight: 900;
+      color: var(--warn); margin-left: 3px;
+    }
+    .formGroup input,
+    .formGroup select,
+    .formGroup textarea {
+      font-family: inherit; font-size: 13px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(26,46,26,.12);
+      background: rgba(255,255,255,.80);
+      color: var(--ink); outline: none;
+      transition: border-color .15s, box-shadow .15s;
+      width: 100%;
+    }
+    .formGroup input:focus,
+    .formGroup select:focus,
+    .formGroup textarea:focus {
+      border-color: rgba(45,138,110,.45);
+      box-shadow: 0 0 0 3px rgba(45,138,110,.10);
+    }
+    .formGroup textarea { resize: vertical; }
+    .formGroup select { cursor: pointer; }
+    .formSubmitRow {
+      grid-column: 1 / -1;
+      display: flex; align-items: center;
+      gap: 14px; flex-wrap: wrap;
+      padding-top: 6px;
+    }
+    .formSubmitRow .btn { font-size: 14px; padding: 13px 24px; }
+    .formSubmitRow .note { font-size: 11px; color: var(--muted); line-height: 1.7; }
+
+    /* ── CTA ── */
+    .ctaCard {
+      border-radius: var(--radius2);
+      background: linear-gradient(135deg, rgba(27,94,32,.92), rgba(45,138,110,.88));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: var(--shadow);
+      padding: 32px 28px; text-align: center;
+      color: rgba(255,255,255,.95);
+    }
+    .ctaCard h2 {
+      font-size: clamp(20px, 2.8vw, 30px);
+      font-weight: 900; letter-spacing: -.02em;
+      line-height: 1.3; margin-bottom: 8px;
+    }
+    .ctaCard p {
+      color: rgba(255,255,255,.65);
+      font-size: 13px; line-height: 1.85;
+      max-width: 56ch; margin: 0 auto 16px;
+    }
+    .ctaCard .btn.primary {
+      background: linear-gradient(135deg, #fff, #E8F5E9);
+      color: var(--g6); font-size: 15px; padding: 13px 22px;
+      box-shadow: 0 10px 30px rgba(255,255,255,.25);
+    }
+
+    /* ── Footer ── */
+    .foot {
+      padding: 18px 0 36px;
+      color: rgba(26,46,26,.50);
+      font-size: 11px; line-height: 1.8;
+    }
+
+    .spacer { height: 10px; }
+
+    /* ── Media Players ── */
+    .media-card {
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow2);
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+    .media-card h3 {
+      margin: 0 0 6px; font-size: 15px; font-weight: 700;
+    }
+    .media-card .media-desc {
+      margin: 0 0 14px; color: var(--muted);
+      font-size: 12px; line-height: 1.85;
+    }
+    .media-card video {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(26,46,26,.08);
+      box-shadow: 0 10px 30px rgba(0,40,20,.08);
+      background: #000;
+    }
+    .media-card audio {
+      width: 100%;
       border-radius: 999px;
+      margin-top: 4px;
     }
-    .step h3{ margin:10px 0 6px; font-size:16px; }
-    .step p{ margin:0; color:var(--muted); font-size:14px; }
+    .media-card .media-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 10px; border-radius: 8px;
+      font-size: 10px; font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .media-badge.video { background: rgba(21,101,192,.10); color: var(--blue); }
+    .media-badge.audio { background: rgba(0,121,107,.10); color: var(--teal); }
+    .media-badge.pdf { background: rgba(230,81,0,.10); color: var(--warn); }
 
-    .cta{
-      margin-top:16px;
-      padding:18px;
-      border-radius: 22px;
-      border:1px solid rgba(31,122,74,.22);
-      background: linear-gradient(135deg, rgba(31,122,74,.12), rgba(42,155,92,.08));
-      box-shadow: var(--shadow2);
-      display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+    /* ── Responsive ── */
+    @media (max-width: 980px) {
+      .nav { display: none; }
+      .heroBody { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .grid2 { grid-template-columns: 1fr; }
+      .stepsGrid { grid-template-columns: 1fr 1fr; }
+      .statsGrid { grid-template-columns: repeat(2, 1fr); }
+      iframe { height: 600px; }
     }
-    .cta b{ font-size:16px; }
-    .cta span{ color:var(--muted); font-size:13px; display:block; margin-top:4px; }
-
-    .assets{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    @media (max-width: 980px){ .assets{grid-template-columns:1fr;} }
-    .asset-card{
-      padding:16px;
-      border-radius: 18px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.75);
-      box-shadow: var(--shadow2);
-    }
-    .asset-card h3{ margin:0 0 6px; font-size:16px; }
-    .asset-card p{ margin:0 0 12px; color:var(--muted); font-size:14px; }
-    .asset-links{ display:flex; gap:10px; flex-wrap:wrap; }
-
-    video, audio{ width:100%; display:block; }
-    .video-wrap{ margin-top:10px; border-radius:16px; overflow:hidden; border:1px solid var(--stroke); background: rgba(255,255,255,.6); }
-    .fine{
-      margin-top:14px;
-      color: rgba(15,35,20,.55);
-      font-size:12px;
-    }
-
-    .footer{
-      padding:26px 0 40px;
-      color: rgba(15,35,20,.55);
-      font-size:12px;
-    }
-    .footer .line{
-      border-top:1px solid var(--stroke);
-      padding-top:14px;
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
-    }
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:6px 10px; border-radius:999px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.55);
-      color: rgba(15,35,20,.75);
-      text-decoration:none;
+    @media (max-width: 640px) {
+      .stepsGrid { grid-template-columns: 1fr; }
+      .statsGrid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Topbar -->
-  <header class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <div class="brand" aria-label="brand">
-          <div class="logo">安全</div>
-          <div>
-            <div style="font-size:14px;font-weight:900;">高年齢労働者の安全と活躍を守る</div>
-            <div style="font-size:12px;color:var(--muted);font-weight:700;">新・安全衛生管理（令和8年4月適用）</div>
-          </div>
+
+  <!-- ═══════════════ TOPBAR ═══════════════ -->
+  <header class="topbar" id="top">
+    <div class="wrap">
+      <div class="inner">
+        <div class="brand">
+          <span class="logo" aria-hidden="true"></span>
+          <span>高年齢者 安全衛生ガイド</span>
+          <span class="pill">令和8年4月 新指針対応</span>
         </div>
-        <nav class="nav" aria-label="primary">
-          <a href="#why">なぜ今</a>
-          <a href="#system">全体像</a>
-          <a href="#actions">すぐやる</a>
-          <a href="#assets">資料</a>
-          <a href="#contact">相談</a>
+
+        <nav class="nav" aria-label="ページ内ナビ">
+          <a href="#overview">指針概要</a>
+          <a href="#measures">対策体系</a>
+          <a href="#environment">職場環境改善</a>
+          <a href="#check">体力チェック</a>
+          <a href="#education">安全衛生教育</a>
+          <a href="#materials">資料DL</a>
+          <a href="#media">動画・音声</a>
+          <a href="#chokin">貯筋運動</a>
         </nav>
+
+        <a class="btn primary" href="#chokin">貯筋運動を知る</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- ═══════════════ ALERT ═══════════════ -->
+  <div class="wrap">
+    <div class="alert">
+      <span class="icon">⚠️</span>
+      <div class="text">
+        <strong>令和8年4月1日｜新指針が適用されます</strong>
+        <p>労働安全衛生法改正に基づく「高年齢者の労働災害防止のための指針」が公表されました。事業者の努力義務として、高年齢者の特性に配慮した作業環境改善・作業管理・安全衛生教育が求められます。</p>
+      </div>
+      <a class="btn warn" href="#materials">指針全文を読む</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
   <main class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <section class="card hero-left" aria-label="hero">
-          <div class="badge">📅 令和8年4月1日から適用｜高年齢者の労働災害防止「新指針」対応</div>
-          <h1 class="h1">
-            ベテラン社員を<br/>
-            <span style="color:var(--brand);">「リスク」ではなく「戦力」</span>として活かす。<br/>
-            経営トップ主導の安全投資へ
-          </h1>
-          <p class="lead">
-            高年齢化に伴う転倒・腰痛・暑熱などのリスクは、現場任せでは減りません。
-            経営層の明確なコミットメント、現場改善、体力機能の“見える化”を通じて、
-            安全と生産性を同時に高める仕組みを構築します。
-          </p>
-
-          <div class="hero-cta">
-            <a href="#contact" class="btn primary">無料相談を申し込む</a>
-            <a href="#assets" class="btn">資料ダウンロード</a>
+    <div class="wrap">
+      <div class="heroCard">
+        <div class="heroTop">
+          <div class="chips">
+            <span class="chip accent"><b>令和8年4月1日 適用</b></span>
+            <span class="chip"><b>努力義務</b></span>
+            <span class="chip">労働安全衛生法 第62条の2</span>
+            <span class="chip">エイジマネジメント</span>
           </div>
+          <a class="btn dark" href="#check">体力チェック票を見る</a>
+        </div>
 
-          <div class="stats">
-            <div class="stat">
-              <b>転倒災害</b>
-              <span>高年齢層で増加傾向</span>
-            </div>
-            <div class="stat">
-              <b>腰痛</b>
-              <span>作業特性×加齢の複合要因</span>
-            </div>
-            <div class="stat">
-              <b>暑熱リスク</b>
-              <span>体温調整機能の変化に配慮</span>
+        <div class="heroBody">
+          <div>
+            <h1>
+              <span class="warn">高年齢労働者</span>の<br>
+              労働災害防止のための<br>
+              <span class="accent">新指針</span>完全ガイド
+            </h1>
+            <p class="lead">
+              労働安全衛生法改正に伴い、働く高齢者の急増と身体機能低下（フレイル・ロコモ等）による転倒・腰痛防止へ、
+              経営トップ主導の体制整備と現場改善が求められます。<br>
+              本ガイドでは、指針の全体像から具体的な対策、体力チェック、エイジマネジメントまで、実務に必要な情報を体系的にまとめています。
+            </p>
+            <div class="heroActions">
+              <a class="btn primary" href="#materials">指針・学習ガイドを読む</a>
+              <a class="btn ghost" href="#overview">指針の概要を確認</a>
+              <a class="btn ghost" href="#chokin">貯筋運動を知る</a>
             </div>
           </div>
-        </section>
 
-        <section class="hero-right">
-          <div class="media">
-            <img src="https://images.unsplash.com/photo-1581091012184-5c0cfa5c0f17" alt="高年齢労働者の安全対策">
-          </div>
-          <div class="card mini">
-            <h3>✔ 経営トップ主導がカギ</h3>
-            <p>単なる安全対策ではなく「経営戦略」として位置付けることが成功のポイントです。</p>
-          </div>
-        </section>
+          <aside class="side" aria-label="要点">
+            <div class="sideCard">
+              <h3>🏢 経営者に求められること</h3>
+              <p>安全衛生方針の表明、実施体制の整備、リスクアセスメントの実施。PDCAサイクルに乗せた組織的・継続的な運用。</p>
+            </div>
+            <div class="sideCard">
+              <h3>⚙️ 現場で取り組むこと</h3>
+              <p>照度確保・段差解消・防滑素材導入などハード面改善と、作業管理・勤務時間の工夫などソフト面の最適化。</p>
+            </div>
+            <div class="sideCard">
+              <h3>🩺 個人の状態を把握する</h3>
+              <p>体力チェック（2ステップテスト等）でフレイル・ロコモを早期発見。意識と現実のギャップを見える化。</p>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Infographic Image -->
+        <div class="heroImgRow">
+          <img src="shishin-infographic.png"
+               alt="【令和8年4月適用】高年齢労働者の労働災害防止：経営者が取り組むべき「新指針」のポイント"
+               loading="eager" />
+        </div>
+
       </div>
     </div>
   </main>
 
-  <!-- なぜ今 -->
-  <section id="why" class="section">
-    <div class="container">
-      <h2>なぜ今、高年齢者対策が重要なのか</h2>
-      <p>
-        少子高齢化の進行により、企業における高年齢労働者の割合は年々増加しています。
-        経験豊富な人材を活かすためには、安全配慮と環境整備が不可欠です。
-      </p>
-    </div>
-  </section>
+  <div class="wrap">
 
-  <!-- 全体像 -->
-  <section id="system" class="section">
-    <div class="container">
-      <h2>3つの柱で構築する新・安全衛生管理</h2>
-      <div class="grid3">
-        <div class="feature">
-          <h3>① 経営トップの明確な方針</h3>
-          <ul>
-            <li>安全投資を経営課題に格上げ</li>
-            <li>全社的なリスクアセスメント実施</li>
-            <li>数値目標の設定</li>
-          </ul>
+    <!-- ═══════════════ OVERVIEW ═══════════════ -->
+    <section id="overview">
+      <div class="sectionTitle">
+        <h2>指針の概要 ― なぜ「高年齢者」への特別な配慮が必要なのか</h2>
+        <p>高年齢労働者は豊富な知識と経験を持つ貴重な戦力ですが、加齢に伴い身体・認知機能の変化が生じます。これらを「個人の問題」とせず、組織として配慮することが、これからの企業経営には不可欠です。</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <span class="tag orange">加齢による変化</span>
+          <h3>👁 視覚・聴覚の変化</h3>
+          <p>明暗の差への対応力の低下、中高音域の聞き取りにくさ。警報音や表示の工夫が必要です。</p>
         </div>
-        <div class="feature">
-          <h3>② 現場改善の徹底</h3>
-          <ul>
-            <li>転倒防止対策</li>
-            <li>作業姿勢の見直し</li>
-            <li>暑熱環境対策</li>
-          </ul>
+        <div class="card">
+          <span class="tag orange">加齢による変化</span>
+          <h3>🌡 身体調節の変化</h3>
+          <p>感覚機能の低下により「暑さ（熱中症リスク）」や「水分不足（脱水リスク）」への鈍感さが生じます。</p>
         </div>
-        <div class="feature">
-          <h3>③ 体力機能の見える化</h3>
-          <ul>
-            <li>簡易体力チェック</li>
-            <li>個別配慮の明確化</li>
-            <li>継続的フォロー体制</li>
-          </ul>
+        <div class="card">
+          <span class="tag orange">加齢による変化</span>
+          <h3>💪 筋力・バランスの変化</h3>
+          <p>重心移動の遅れや筋力低下による、転倒・滑り・踏み外し。フレイル・ロコモへの早期対応が重要。</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- すぐやる -->
-  <section id="actions" class="section">
-    <div class="container">
-      <h2>今日から始める3ステップ</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="kicker">STEP 1</div>
+    <!-- ═══════════════ STATS ═══════════════ -->
+    <section id="stats">
+      <div class="sectionTitle">
+        <h2>高年齢労働者を取り巻く現状</h2>
+        <p>転倒・腰痛など行動災害は、高年齢者ほど重篤化しやすく、休業期間も長期化する傾向にあります。</p>
+      </div>
+
+      <div class="statsGrid">
+        <div class="statCard">
+          <div class="num">62条の2</div>
+          <div class="label">労働安全衛生法<br>根拠条文</div>
+        </div>
+        <div class="statCard">
+          <div class="num">R8.4.1</div>
+          <div class="label">新指針<br>適用開始日</div>
+        </div>
+        <div class="statCard">
+          <div class="num">100項目</div>
+          <div class="label">エイジアクション<br>チェックリスト</div>
+        </div>
+        <div class="statCard">
+          <div class="num">5種目</div>
+          <div class="label">体力チェック<br>計測項目</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ MEASURES ═══════════════ -->
+    <section id="measures">
+      <div class="sectionTitle">
+        <h2>事業者が取り組むべき具体的な対策の体系</h2>
+        <p>指針に基づき、「場のリスク（予防）」「人のリスク（把握）」「就業上の措置」の3軸で対策を推進します。</p>
+      </div>
+
+      <div class="stepsGrid">
+        <div class="stepCard">
+          <div class="stepNum">1</div>
+          <h3>安全衛生管理体制の確立</h3>
+          <p>経営トップの方針表明、実施体制の整備、安全衛生委員会での審議、年間計画の策定と評価。</p>
+        </div>
+        <div class="stepCard">
+          <div class="stepNum">2</div>
+          <h3>職場環境の改善</h3>
+          <p>身体機能を補う設備導入、照度確保、段差解消、防滑素材、暑熱対策、重量物対応、情報機器対応。</p>
+        </div>
+        <div class="stepCard">
+          <div class="stepNum">3</div>
+          <h3>健康・体力の把握</h3>
+          <p>健康診断の確実な実施、体力チェック（5種目）の継続実施、フレイル・ロコモの早期発見。</p>
+        </div>
+        <div class="stepCard">
+          <div class="stepNum">4</div>
+          <h3>安全衛生教育</h3>
+          <p>高年齢者向け教育、管理監督者教育、VR危険体感、若年者との相互学習、声がけの習慣化。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ RISK ASSESSMENT ═══════════════ -->
+    <section>
+      <div class="sectionTitle">
+        <h2>リスクアセスメントの優先順位</h2>
+        <p>リスク低減措置は、以下の優先順位で検討・実施します（リスクアセスメント指針に基づく）。</p>
+      </div>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:8%">優先順位</th>
+              <th style="width:22%">対策カテゴリー</th>
+              <th>具体的な取組例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>第1位</strong></td>
+              <td>設計・計画的対策</td>
+              <td>危険な作業の廃止・変更、地上作業への代替、作業フローの改善</td>
+            </tr>
+            <tr>
+              <td><strong>第2位</strong></td>
+              <td>工学的対策</td>
+              <td>手すりの設置、段差の解消、床への防滑素材（シート等）の採用</td>
+            </tr>
+            <tr>
+              <td><strong>第3位</strong></td>
+              <td>管理的対策</td>
+              <td>作業マニュアルの整備、バディ制の導入、重量物の小口化</td>
+            </tr>
+            <tr>
+              <td><strong>第4位</strong></td>
+              <td>個人用装備</td>
+              <td>アシストスーツ、防滑靴、墜落制止用器具（安全帯）の徹底</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ENVIRONMENT ═══════════════ -->
+    <section id="environment">
+      <div class="sectionTitle">
+        <h2>職場環境の改善 ― ハード面とソフト面の具体策</h2>
+        <p>加齢による身体機能の低下を「設備」で補い、「運用ルール」で最適化します。</p>
+      </div>
+
+      <div class="grid grid2">
+        <div class="card">
+          <span class="tag green">ハード面</span>
+          <h3>👁 視覚・聴覚への配慮</h3>
+          <p>通路・作業場所の照度確保、急激な明るさの変化の解消。警報音は中低音域に。パトライトや指向性スピーカーの併用で視覚・聴覚の両面から注意喚起。</p>
+        </div>
+        <div class="card">
+          <span class="tag green">ハード面</span>
+          <h3>🌡 暑熱対策</h3>
+          <p>WBGT値の測定、涼しい休憩所の整備。通気性の良い作業服・クールヘルメットの準備。ウェアラブルデバイスによる初期症状の客観的把握。</p>
+        </div>
+        <div class="card">
+          <span class="tag green">ハード面</span>
+          <h3>🏗 転倒・墜落防止</h3>
+          <p>階段への手すり設置、床の水分・油分の清掃、防滑素材の採用。高所作業はできる限り回避、やむを得ない場合は安全な作業床と墜落制止用器具を徹底。</p>
+        </div>
+        <div class="card">
+          <span class="tag green">ハード面</span>
+          <h3>💪 重量物・身体負荷の軽減</h3>
+          <p>台車・昇降装置・バランサー・スライディングシート等の補助機器導入。作業台の高さを「肘が90度」に調整。アシストスーツの導入検討。</p>
+        </div>
+        <div class="card">
+          <span class="tag blue">ソフト面</span>
+          <h3>⏰ 勤務形態・時間の工夫</h3>
+          <p>短時間勤務、隔日勤務、交替制勤務など柔軟なシフト。夜勤はできる限り回避。ワークシェアリングによる業務負荷の分散・軽減。</p>
+        </div>
+        <div class="card">
+          <span class="tag blue">ソフト面</span>
+          <h3>📋 作業管理・注意力への配慮</h3>
+          <p>ゆとりのあるペース設定、図解・写真・動画を活用した分かりやすいマニュアル。マルチタスクの回避。バディ制による体調確認。始業時の声がけ習慣化。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CHECK ═══════════════ -->
+    <section id="check">
+      <div class="sectionTitle">
+        <h2>体力チェック ― 5つの計測項目と「意識と現実のギャップ」</h2>
+        <p>労働災害に直結する身体機能を定期的に測定し、本人と事業者の双方が「気づき」を得ることが重要です。</p>
+      </div>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:8%">No.</th>
+              <th style="width:25%">計測項目</th>
+              <th style="width:18%">評価する機能</th>
+              <th>測定の具体的な内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>①</td><td>2ステップテスト</td><td>歩行能力・筋力</td><td>最大2歩幅（cm）を計測し、身長（cm）で割る</td></tr>
+            <tr><td>②</td><td>座位ステッピング</td><td>敏捷性</td><td>20秒間で足の開閉が何回できるかを数える</td></tr>
+            <tr><td>③</td><td>ファンクショナルリーチ</td><td>動的バランス</td><td>水平にどこまで腕を伸ばせるか（cm）を計測</td></tr>
+            <tr><td>④</td><td>閉眼片足立ち</td><td>静的バランス</td><td>目を閉じて片足で立っていられる時間（秒）</td></tr>
+            <tr><td>⑤</td><td>開眼片足立ち</td><td>静的バランス</td><td>目を開けて片足で立っていられる時間（秒）</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="sectionTitle">
+        <h2>レーダーチャートによる5つのパターン分析</h2>
+        <p>実際の計測結果と自己認識のズレを読み解き、最も危険なパターンを特定します。</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <span class="tag green">パターン1</span>
+          <h3>計測 ≧ 認識（慎重型）</h3>
+          <p>自分の体力を慎重に評価している状態。過信せず体力の維持に努める。現時点でリスクは低い。</p>
+        </div>
+        <div class="card" style="border-color:rgba(230,81,0,.30);">
+          <span class="tag orange">パターン2【最も危険】</span>
+          <h3>計測 ＜ 認識（過信型）</h3>
+          <p>自分が思っている以上に動けない。急な動作で転倒するリスクが極めて高い。体力向上と環境整備が急務。</p>
+        </div>
+        <div class="card">
+          <span class="tag green">パターン3</span>
+          <h3>共に高い（良好型）</h3>
+          <p>現状は良好で自己認識も適切。ただし加齢による急激な低下に注意が必要。体力維持を継続。</p>
+        </div>
+        <div class="card">
+          <span class="tag blue">パターン4</span>
+          <h3>共に低い（自覚型）</h3>
+          <p>リスクを自覚している。職場の整理整頓や無理のない配置が急務。体力向上で枠を大きくする。</p>
+        </div>
+        <div class="card" style="border-color:rgba(230,81,0,.20);">
+          <span class="tag orange">パターン5【要注意】</span>
+          <h3>項目により逆転（混在型）</h3>
+          <p>「過信」と「慎重」が混在。認識が不安定で思わぬ転倒リスクあり。低い項目の改善と環境整備を優先。</p>
+        </div>
+        <div class="card">
+          <span class="tag teal">対策のポイント</span>
+          <h3>🎯 フレイル・ロコモの早期発見</h3>
+          <p>フレイル（心身の活力低下）、ロコモティブシンドローム（運動器の衰え）、骨粗鬆症の早期発見に努め、保健指導や運動習慣づくりで予防。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ EDUCATION ═══════════════ -->
+    <section id="education">
+      <div class="sectionTitle">
+        <h2>安全衛生教育と外部支援の活用</h2>
+        <p>「ベテランだから大丈夫」という先入観を捨て、客観データに基づいた教育を継続します。</p>
+      </div>
+
+      <div class="grid grid2">
+        <div class="card">
+          <span class="tag teal">教育手法</span>
+          <h3>📸 視覚情報の徹底活用</h3>
+          <p>写真、図、映像に加え、VR技術（危険体感教育）を活用して直感的な理解を促進。勤務シフトから集合研修が困難な場合は視聴覚教材が有効。</p>
+        </div>
+        <div class="card">
+          <span class="tag teal">教育手法</span>
+          <h3>🤝 相互教育の促進</h3>
+          <p>ITに強い若年労働者と経験豊富な高年齢労働者をペアリングし、知識と経験を相互に補完。チームで働く機会を積極的に設定。</p>
+        </div>
+        <div class="card">
+          <span class="tag blue">外部支援</span>
+          <h3>🏥 産業保健総合支援センター</h3>
+          <p>医師・保健師等による専門相談や研修。50人未満の事業場は地域産業保健センターを活用。</p>
+        </div>
+        <div class="card">
+          <span class="tag blue">外部支援</span>
+          <h3>💰 エイジフレンドリー補助金</h3>
+          <p>アシストスーツ導入や段差解消など、職場環境改善費用の補助制度。中小企業の取組を支援。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CHECKLIST PREVIEW ═══════════════ -->
+    <section>
+      <div class="sectionTitle">
+        <h2>エイジアクション100 チェックリスト（抜粋）</h2>
+        <p>指針に基づく100項目のチェックリストから、主要項目を抜粋しています。完全版は指針PDFに収録。</p>
+      </div>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:5%">No.</th>
+              <th style="width:18%">カテゴリ</th>
+              <th>チェック項目</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>6</td><td>転倒防止</td><td>通路の十分な幅を確保し、整理・整頓により通路、階段、出入口には物を放置せず、足元の電気配線やケーブルはまとめている。</td></tr>
+            <tr><td>9</td><td>転倒防止</td><td>階段には手すりを設けるほか、通路の段差を解消し、滑りやすい箇所にはすべり止めを設ける等の設備改善を行っている。</td></tr>
+            <tr><td>20</td><td>腰痛予防</td><td>ひねり、前かがみ、中腰等の不自然な作業姿勢を取らせないようにしている。</td></tr>
+            <tr><td>25</td><td>重量物取扱</td><td>重量物を取り扱う場合には、機械（台車・昇降装置・バランサー等）による自動化・省力化、アシストスーツ等の活用による負担軽減を行っている。</td></tr>
+            <tr><td>50</td><td>熱中症予防</td><td>自覚症状の有無に関わらず、定期的に水分・塩分を摂取させている。</td></tr>
+            <tr><td>84</td><td>体力管理</td><td>転倒・腰痛等に関連する体力測定やその予防のための筋トレ・ストレッチ体操等の運動指導を行っている。</td></tr>
+            <tr><td>89</td><td>安全教育</td><td>「ベテランだから大丈夫」という先入観は持たないで、十分な時間をかけて、教育・指導を行っている。</td></tr>
+            <tr><td>95</td><td>エイジ管理</td><td>高齢期になっても元気に働けるように、若年時から、運動指導、生活習慣指導等の健康教育、口腔衛生等の健康づくりの支援を行っている。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══════════════ MATERIALS ═══════════════ -->
+    <section id="materials">
+      <div class="sectionTitle">
+        <h2>資料ダウンロード・閲覧</h2>
+        <p>指針の全文、体系的学習ガイド、インフォグラフィックをご利用いただけます。</p>
+      </div>
+
+      <!-- PDF 1: 学習ガイド -->
+      <div class="card" style="margin-bottom:12px;">
+        <h3>📄 高年齢労働者の安全と健康を守るための体系的学習ガイド</h3>
+        <p class="tiny">
+          NotebookLMで作成された6章構成の学習ガイド。加齢による身体変化、管理体制、リスクアセスメント、職場環境改善、作業管理、体力チェック、安全衛生教育を体系的に解説。
+        </p>
+        <div class="spacer"></div>
+        <iframe
+          src="learning-guide.pdf#view=FitH"
+          title="高年齢労働者の安全と健康を守るための体系的学習ガイド"
+          loading="lazy">
+        </iframe>
+        <div class="spacer"></div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn dark" href="learning-guide.pdf" target="_blank" rel="noopener">別タブで開く</a>
+          <a class="btn primary" href="learning-guide.pdf" download="高年齢労働者の安全と健康を守るための体系的学習ガイド.pdf">PDFをダウンロード</a>
+        </div>
+      </div>
+
+      <!-- PDF 2: 指針全文 -->
+      <div class="downloadRow" style="margin-bottom:12px;">
+        <div>
+          <h3>📎 高年齢者の労働災害防止のための指針（全文）</h3>
+          <p>厚生労働省労働基準局長通知（基発0210第1号）に基づく指針全文。エイジアクション100チェックリスト、転倒等リスク評価セルフチェック票を含む29ページの公式文書。</p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn dark" href="shishin-full.pdf" target="_blank" rel="noopener">別タブで開く</a>
+          <a class="btn primary" href="shishin-full.pdf" download="高年齢者の労働災害防止のための指針.pdf">PDFをダウンロード</a>
+        </div>
+      </div>
+
+      <!-- Image: Infographic -->
+      <div class="downloadRow">
+        <div>
+          <h3>🖼 新指針ポイント インフォグラフィック</h3>
+          <p>指針の要点を1枚にまとめたビジュアル資料。社内掲示・研修資料・配布資料としてご活用ください。</p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn dark" href="shishin-infographic.png" target="_blank" rel="noopener">画像を表示</a>
+          <a class="btn primary" href="shishin-infographic.png" download="高年齢者の労働災害防止のための指針_ポイント.png">画像をダウンロード</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ MEDIA: VIDEO / AUDIO / SLIDES ═══════════════ -->
+    <section id="media">
+      <div class="sectionTitle">
+        <h2>動画・音声・スライド資料</h2>
+        <p>新指針のポイントを動画解説・音声ブリーフィング・スライド形式でもご覧いただけます。移動中や研修時にご活用ください。</p>
+      </div>
+
+      <!-- MP4 Video -->
+      <div class="media-card">
+        <span class="media-badge video">🎬 動画解説</span>
+        <h3>📹 新指針ブリーフィング動画</h3>
+        <p class="media-desc">
+          令和8年4月適用「高年齢者の労働災害防止のための指針」のポイントを動画で解説。社内研修やミーティングでの共有にご活用ください。
+        </p>
+        <video controls preload="metadata" playsinline>
+          <source src="briefing.mp4" type="video/mp4">
+          お使いのブラウザは動画再生に対応していません。<a href="briefing.mp4" download>こちらからダウンロード</a>してください。
+        </video>
+        <div class="spacer"></div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn primary" href="briefing.mp4" download="新指針ブリーフィング動画.mp4">動画をダウンロード</a>
+        </div>
+      </div>
+
+      <!-- M4A Audio -->
+      <div class="media-card">
+        <span class="media-badge audio">🎧 音声解説</span>
+        <h3>🔊 「安全」への投資 ― 音声ブリーフィング</h3>
+        <p class="media-desc">
+          高年齢者安全対策の概要を音声で解説。通勤中やスキマ時間のインプットに最適です。
+        </p>
+        <audio controls preload="metadata">
+          <source src="invest.m4a" type="audio/mp4">
+          お使いのブラウザは音声再生に対応していません。<a href="invest.m4a" download>こちらからダウンロード</a>してください。
+        </audio>
+        <div class="spacer"></div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn primary" href="invest.m4a" download="安全への投資_音声ブリーフィング.m4a">音声をダウンロード</a>
+        </div>
+      </div>
+
+      <!-- Slides PDF -->
+      <div class="media-card">
+        <span class="media-badge pdf">📊 スライド資料</span>
+        <h3>📑 新指針対応ガイド スライド資料</h3>
+        <p class="media-desc">
+          高年齢労働者の安全と活躍を守る「新・安全衛生管理」の全体像をスライド形式でまとめています。経営層への説明資料やセミナー資料としてご活用ください。
+        </p>
+        <iframe
+          src="slides.pdf#view=FitH"
+          title="新指針対応ガイド スライド資料"
+          loading="lazy">
+        </iframe>
+        <div class="spacer"></div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn dark" href="slides.pdf" target="_blank" rel="noopener">別タブで開く</a>
+          <a class="btn primary" href="slides.pdf" download="高年齢労働者の安全と活躍_新安全衛生管理スライド.pdf">PDFをダウンロード</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ IMPLEMENTATION STEPS ═══════════════ -->
+    <section>
+      <div class="sectionTitle">
+        <h2>導入ステップ ― 指針対応の4フェーズ</h2>
+        <p>令和8年4月の適用に向けて、段階的に対策を推進します。</p>
+      </div>
+
+      <div class="stepsGrid">
+        <div class="stepCard">
+          <div class="stepNum">1</div>
           <h3>現状把握</h3>
-          <p>労災発生状況・年齢構成・作業特性を可視化。</p>
+          <p>エイジアクション100でセルフチェック。ヒヤリ・ハット事例の収集。高年齢者の就労実態と業務内容の棚卸し。</p>
         </div>
-        <div class="step">
-          <div class="kicker">STEP 2</div>
-          <h3>重点対策の決定</h3>
-          <p>転倒・腰痛・暑熱対策の優先順位を設定。</p>
+        <div class="stepCard">
+          <div class="stepNum">2</div>
+          <h3>体制整備</h3>
+          <p>経営トップの方針表明。担当部門・担当者の指定。安全衛生委員会での審議。年間推進計画の策定。</p>
         </div>
-        <div class="step">
-          <div class="kicker">STEP 3</div>
-          <h3>社内周知と実行</h3>
-          <p>経営トップからメッセージ発信、全社展開。</p>
+        <div class="stepCard">
+          <div class="stepNum">3</div>
+          <h3>対策実施</h3>
+          <p>リスクアセスメントに基づく優先順位で環境改善。体力チェックの導入。作業管理の見直し。安全衛生教育の計画的実施。</p>
+        </div>
+        <div class="stepCard">
+          <div class="stepNum">4</div>
+          <h3>評価・改善</h3>
+          <p>実施状況の定期的な評価。PDCAサイクルによる継続的改善。エイジフレンドリー補助金等の外部支援も活用。</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 資料 -->
-  <section id="assets" class="section">
-    <div class="container">
-      <h2>関連資料</h2>
-      <div class="assets">
-        <div class="asset-card">
-          <h3>制度解説資料</h3>
-          <p>令和8年4月適用の新指針のポイントを解説。</p>
-          <div class="asset-links">
-            <a href="#" class="btn">PDFダウンロード</a>
+    <!-- ═══════════════ 貯筋運動プロジェクト ═══════════════ -->
+    <section id="chokin">
+      <div class="sectionTitle">
+        <h2>貯筋運動プロジェクト ― 「筋肉の貯金」で転倒・寝たきりを防ぐ</h2>
+        <p>公益財団法人 健康・体力づくり事業財団が推進する「貯筋運動プロジェクト」は、道具を使わず自体重で行う筋力トレーニング。高年齢労働者の体力維持・転倒予防に最適です。</p>
+      </div>
+
+      <div class="ctaCard" style="text-align:left; margin-bottom:12px;">
+        <div style="text-align:center; margin-bottom:16px;">
+          <span style="font-size:48px;">🏋️</span>
+          <h2 style="margin-top:8px;">お金は借りられるが、<br>筋肉は借りられない。</h2>
+          <p style="max-width:60ch; margin:8px auto 0;">「貯筋運動」とは、福永哲夫氏（鹿屋体育大学学長）が提唱する、毎日少しずつ「筋肉を貯金」していく考え方の筋力トレーニングです。特別な器具は不要。自分の体重を利用して、いつでもどこでも取り組めます。</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <span class="tag green">考え方</span>
+          <h3>💰 なぜ「貯筋」なのか？</h3>
+          <p>筋肉は加齢とともに減少します。「寝たきりライン」を下回ると自立生活が困難に。病気やケガで入院しても、筋肉の貯金に余裕があれば復帰できます。備えあれば憂いなし ― それは筋肉にも当てはまります。</p>
+        </div>
+        <div class="card">
+          <span class="tag orange">特徴</span>
+          <h3>🏠 道具なし・自体重でOK</h3>
+          <p>貯筋運動は特別な器具を使わず、自分の体重を利用した筋力トレーニング。職場でも自宅でもすぐに始められます。効果測定は「残高チェック」と呼ばれ、モチベーション維持にも効果的です。</p>
+        </div>
+        <div class="card">
+          <span class="tag blue">実績</span>
+          <h3>📊 全国で広がる実践</h3>
+          <p>全国の総合型地域スポーツクラブで「貯筋運動ステーション」が展開されています。健康運動指導士による指導のもと、970名以上が指導者研修を修了。参加者の65%が運動を継続しています。</p>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="grid2">
+        <div class="card">
+          <span class="tag teal">職場での活用</span>
+          <h3>🏭 高年齢労働者の体力づくりに</h3>
+          <p>新指針では「体力チェック」と「運動指導」が求められています。貯筋運動は、準備体操やストレッチの時間に組み込むことで、日常的な転倒予防・腰痛予防の取り組みとして活用できます。エイジアクション100のチェック項目「体力管理」への対応にも最適です。</p>
+        </div>
+        <div class="card">
+          <span class="tag green">リンク</span>
+          <h3>🔗 貯筋運動プロジェクト公式サイト</h3>
+          <p>貯筋運動の詳しい内容、動画、指導者研修の情報は公式サイトでご確認いただけます。</p>
+          <div class="spacer"></div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="https://www.health-net.or.jp/tyousa/tyokin/" target="_blank" rel="noopener">貯筋運動プロジェクト公式サイト →</a>
+            <a class="btn ghost" href="https://www.health-net.or.jp/tyousa/tyokin/susume.html" target="_blank" rel="noopener">貯筋のすすめを読む</a>
           </div>
         </div>
-        <div class="asset-card">
-          <h3>セミナー動画</h3>
-          <div class="video-wrap">
-            <video controls>
-              <source src="sample.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="cta">
-        <div>
-          <b>高年齢労働者対策を経営戦略へ。</b>
-          <span>無料相談で貴社の課題を整理します。</span>
-        </div>
-        <a href="mailto:info@example.com" class="btn primary">今すぐ相談する</a>
-      </div>
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <div class="foot">
+      © kenjispark｜おぶすま社会保険労務士事務所<br>
+      本ページは「高年齢者の労働災害防止のための指針」（令和8年2月10日公表、令和8年4月1日適用）に基づき作成しています。<br>
+      ※本ページの内容は情報提供を目的としたものであり、個別の法的助言を構成するものではありません。具体的な対応については専門家にご相談ください。
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="line">
-        <div>© 2026 新・安全衛生管理</div>
-        <div>
-          <a href="#" class="pill">プライバシーポリシー</a>
-          <a href="#" class="pill">運営者情報</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  </div><!-- /.wrap -->
+
 </body>
 </html>
-
